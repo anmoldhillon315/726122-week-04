@@ -10,6 +10,8 @@ namespace c0726122
     {
         static void Main(string[] args)
         {
+            countryside blue = new countryside();
+            blue.Launch();
         }
         class village
         {
@@ -25,8 +27,11 @@ namespace c0726122
             village Ajax= new village();
             village First;
             village Last;
+            village temp;
             public void Launch()
             {
+                First = Maple;
+                Last = Ajax;
                 Maple.villagename = "Maple";
                 Maple.nextVillage = Toronto;
                 Maple.previousVillage = null;
@@ -36,7 +41,17 @@ namespace c0726122
                 Ajax.villagename = "Ajax";
                 Ajax.nextVillage = Toronto;
                 Ajax.previousVillage = null;
+                Console.WriteLine(this.displayMap());
             }
+            public string displayMap()
+            {
+                string listOfCities = "";
+                listOfCities = listOfCities + First.villagename + "________";
+                temp = First.nextVillage;
+                listOfCities = listOfCities + temp.villagename + "________";
+                return listOfCities;
+            }
+          
         }
     }
 }
