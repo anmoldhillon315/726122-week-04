@@ -4,12 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace c0726122
 {
     class Program
     {
         static void Main(string[] args)
         {
+        }
+        class village
+        {
+            public village nextVillage;
+            public string villagename;
+            public bool isAstrildeHere = false;
         }
     }
 }
